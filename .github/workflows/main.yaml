@@ -2,14 +2,16 @@ name: Upload Website
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "pipeline" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "pipeline" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./Frontend/home-library
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
