@@ -2,8 +2,8 @@ name: Upload Website
 
 on:
   push:
-    branches: ["pipeline", ".github/workflows"]
-    paths: ["Frontend"]
+    branches: ["pipeline"]
+    paths: ["Frontend", ".github/workflows"]
   pull_request:
     branches: ["pipeline"]
 
